@@ -40,5 +40,5 @@ jobs:
     - name: Chap1
       run: |
 
-        python chap1
+        python chap1.py
 
