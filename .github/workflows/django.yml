@@ -25,7 +25,7 @@ jobs:
 
     - name: Build docker image
       run: |
-       docker build dockerbuild/ --tag $IMAGE_NAME
+       docker build . --file Dockerfile --tag $IMAGE_NAME
     - name: Install Dependencies
 
       run: |
