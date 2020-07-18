@@ -8,6 +8,8 @@ env:
   IMAGE_NAME: image
   
 on:
+  push:
+    branches: [ master ]
   
   pull_request:
     branches: [ master ]
@@ -76,3 +78,6 @@ jobs:
 
           docker tag $IMAGE_NAME $IMAGE_ID:$VERSION
           docker push $IMAGE_ID:$VERSION
+          
+          
+          
