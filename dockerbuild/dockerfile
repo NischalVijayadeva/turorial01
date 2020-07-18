@@ -13,5 +13,3 @@ LABEL maintainer "nischal.vijayadeva@gmail.com"
 # run dependency installation
 RUN pip install -r requirement.txt
 
-
-
