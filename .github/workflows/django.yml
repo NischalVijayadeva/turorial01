@@ -33,7 +33,7 @@ jobs:
     - name: Build docker image
       run: |
         echo $IMAGE_NAME
-        docker build ./dockerbuild/ --file dockerfile --tag $IMAGE_NAME
+        docker build ./dockerbuild/dockerfile --tag $IMAGE_NAME
     - name: Install Dependencies
 
       run: |
