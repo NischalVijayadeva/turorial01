@@ -1,0 +1,14 @@
+# use node base file
+FROM django:onbuild
+
+# set maintainer
+LABEL maintainer "nischal.vijayadeva@gmail.com"
+
+# Set HealthCheck
+HEALTHCHECK 	--interval=5s \
+		--timeout=5s\
+		CMD curl -f http://127.0.0.1:8000 || exxit 1
+
+# Expose port
+EXPOSE 8000
+
