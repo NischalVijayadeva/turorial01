@@ -37,4 +37,4 @@ jobs:
         #flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with chap1
       run: |
-        chap1
+        python chap1.py
