@@ -25,7 +25,7 @@ jobs:
         python-version: ${{ matrix.python-version }}
     - name: Build docker image
       run: |
-       docker build dockerfile 
+       docker build dockerbuild/dockerfile
     - name: Install Dependencies
       run: |
         python -m pip install --upgrade pip
