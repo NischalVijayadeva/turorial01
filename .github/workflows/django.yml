@@ -42,3 +42,6 @@ jobs:
 
         python chap1.py
 
+    - name: Deploy
+      run: |
+        docker push latest
