@@ -30,3 +30,8 @@ jobs:
     - name: Run chap1
       run: |
         python chap1.py
+        
+    - name: Deploy
+      run: |
+        docker build .
+        docker push "latest"
