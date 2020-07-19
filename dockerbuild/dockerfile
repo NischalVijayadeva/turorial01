@@ -1,19 +1,30 @@
 # use node base file
-FROM nischalvijayadeva/tutorial_01:latest
+FROM python:3
 
 # set working directory
-#WORKDIR /usr/src/app
+WORKDIR /usr/src/app
 
 # copy requirement.txt
-# COPY requirement.txt ./
+ COPY requirement.txt ./
+
+ 
 
 # set maintainer
-#LABEL maintainer "nischal.vijayadeva@gmail.com"
+LABEL maintainer "nischal.vijayadeva@gmail.com"
+
+
+
 
 # run dependency installation
 #RUN pip install -r requirement.txt
 
 
+RUN pip install --update pip
+
+COPY . .
+
+EXPOSE 8000
+ CMD ["python","chap1.py","runserver"]
 
 
 
