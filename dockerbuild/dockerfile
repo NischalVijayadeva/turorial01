@@ -19,7 +19,7 @@ LABEL maintainer "nischal.vijayadeva@gmail.com"
 #RUN pip install -r requirement.txt
 
 
-RUN pip install --U pip
+RUN pip install -U pip
 
 COPY . .
 
