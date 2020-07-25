@@ -50,7 +50,8 @@ jobs:
     - name: test Chap1
       run: |
 
-        python chap1.py
+        #python chap1.py
+         python Models/Students.py
    
     - name: Log into registry
       run: echo "${{ secrets.GITHUB_TOKEN }}" | docker login docker.pkg.github.com -u ${{ github.actor }} --password-stdin
