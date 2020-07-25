@@ -12,7 +12,7 @@ class Students:
      self.students = list()
 
   def addStudent(self, name, dept):
-     self.students.append(len(self.students)+1, name, dept)
+     self.students.append(Student(len(self.students)+1, name, dept))
 
   def removeStudentById(self, id):
      stud = getStudentById(id)
