@@ -1,5 +1,5 @@
 import unittest 
-
+import Models
 
 class Student:
   def __init__(self, id, name, dept):
@@ -12,10 +12,12 @@ class Students:
      self.students = list()
 
   def addStudent(self, name, dept):
-     self.students.append(Student(len(self.students)+1, name, dept))
+     id = len(self.students)+1
+     self.students.append(Student(id, name, dept))
+     return id
 
   def removeStudentById(self, id):
-     stud = getStudentById(id)
+     stud = self.getStudentById(id)
      self.students.remove(stud)
 
   def getStudentById(self, id):

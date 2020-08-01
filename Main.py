@@ -1,13 +1,13 @@
-import unittest
+# import unittest
 
-from Tests import TestCar
+# from Tests import TestCar
 
 
-if __name__ == "__main__":
+# if __name__ == "__main__":
 
-    car = TestCar.TestCar("Maruthi 800",2010,100,"Green")
+#    # car = TestCar.TestCar("Maruthi 1000",2010,100,"Green")
 
-    unittest.main()
+#     unittest.main()
 
     # ftc2 = unittest.FunctionTestCase(car.testcarStart)
 
@@ -25,3 +25,23 @@ if __name__ == "__main__":
     # runner.run(ts)
 
     
+import unittest
+
+class TestStringMethods(unittest.TestCase):
+
+    def test_upper(self):
+        self.assertEqual('foo'.upper(), 'FOO')
+
+    def test_isupper(self):
+        self.assertTrue('FOO'.isupper())
+        self.assertFalse('Foo'.isupper())
+
+    def test_split(self):
+        s = 'hello world'
+        self.assertEqual(s.split(), ['hello', 'world'])
+        # check that s.split fails when the separator is not a string
+        with self.assertRaises(TypeError):
+            s.split(2)
+
+if __name__ == '__main__':
+    unittest.main()
